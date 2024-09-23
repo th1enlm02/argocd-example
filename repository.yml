@@ -1,0 +1,10 @@
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: HelmRepository
+metadata:
+  name: innovaz-repo-chart
+  namespace: microservices-v2
+spec:
+  interval: 1m
+  url: https://gitlab.rinznetwork.com/api/v4/projects/1761/packages/helm/master
+  secretRef:
+    name: gitlab-token-secret
